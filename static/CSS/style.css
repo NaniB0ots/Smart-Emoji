@@ -1,0 +1,48 @@
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+  }
+
+.choose_emoji{
+	background-color: green;
+	padding: 20px;
+
+}
+
+.choose_emoji h2{
+	font-weight: 800;
+	font-size: 48px;
+	line-height: 64px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.emojis{
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.emoji_link{
+	text-decoration: none;
+}
+
+.emoji_img{
+	font-size: 40px;
+	text-align: center;
+}
+
+.emoji_text{
+	font-size: 20px;
+	text-align: center;
+	color: #ffffff;
+	padding-top: 15px;
+}
+
+.emojis__item{
+	padding: 40px;
+}
