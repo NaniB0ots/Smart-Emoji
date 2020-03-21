@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 		<title>Smart Emoji</title>
 	</head>
 	<body>
@@ -42,7 +41,7 @@
 		</div>
 		<div class="main-block">
 			<div class="block">
-				<img src="{% static "img/book1.jpg" %}" alt="">
+				<a href="choose_emoji"><img src="{% static "img/book1.jpg" %}" alt=""></a>
 				<p><a href="choose_emoji">Подборка книг по эмодзи</a></p>
 			</div>
 			<div class="block">
@@ -59,35 +58,260 @@
 		<div class="slider">
 			<div class="slider__wrapper">
 				<div class="slider__item">
-					<!--   <div style="height: 150px; font-size:20px; color:black; background: url(img/img-book1.jpg);"><p>Глубокое обучение на питоне</p></div> -->
-				
-						<img src="{% static "img/img-book1.jpg" %}" alt="">
-						<p>Глубокое обучение на питоне</p>
+						<img src="{% static "img/b1.jpg" %}" alt="">
+						<p>В.Гюго.Девяносто третий год. 399р.</p>
 				</div>
 				<div class="slider__item">
-					<img src="{% static "img/img-book1.jpg" %}" alt="">
-						<p>Глубокое обучение на питоне</p>
+					<img src="{% static "img/b2.jpg" %}" alt="">
+						<p>Г.Маркес.Сто лет одиночества.349р.</p>
 				</div>
 				<div class="slider__item">
-					<img src="{% static "img/img-book1.jpg" %}" alt="">
-						<p>Глубокое обучение на питоне</p>
+					<img src="{% static "img/b3.jpg" %}" alt="">
+						<p>Г.Лавкрафт.Сны Ктулху.499р.</p>
 				</div>
 				<div class="slider__item">
-					<img src="{% static "img/img-book1.jpg" %}" alt="">
-						<p>Глубокое обучение на питоне</p>
+					<img src="{% static "img/b10.jpg" %}" alt="">
+						<p>Т.Старджон.Больше,чем люди. 349р.</p>
 				</div>
 				<div class="slider__item">
-					<img src="{% static "img/img-book1.jpg" %}" alt="">
-						<p>Глубокое обучение на питоне</p>
+					<img src="{% static "img/b4.jpg" %}" alt="">
+						<p>Д.Роллинс.Тропа мертвых.299р.</p>
 				</div>
 				<div class="slider__item">
-					<img src="{% static "img/img-book1.jpg" %}" alt="">
-						<p>Глубокое обучение на питоне</p>
+					<img src="{% static "img/b5.jpg" %}" alt="">
+						<p>Д.Лондон.Зов предков.349р.</p>
 				</div>
 				<div class="slider__item">
-					<img src="{% static "img/img-book1.jpg" %}" alt="">
-						<p>Глубокое обучение на питоне</p>
+					<img src="{% static "img/b7.jpg" %}" alt="">
+						<p>О.Уайлд.Портрет Дориана Грея.449р.</p>
 				</div>
+			</div>
+			<a class="slider__control slider__control_left" href="#" role="button"></a>
+			<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+		</div>
+	</div>
+	<script>
+	'use strict';
+	var multiItemSlider = (function () {
+	return function (selector, config) {
+	var
+	_mainElement = document.querySelector(selector), // основный элемент блока
+	_sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+	_sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+	_sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+	_sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+	_sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+	_wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+	_itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+	_positionLeftItem = 0, // позиция левого активного элемента
+	_transform = 0, // значение транфсофрмации .slider_wrapper
+	_step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+	_items = []; // массив элементов
+	// наполнение массива _items
+	_sliderItems.forEach(function (item, index) {
+	_items.push({ item: item, position: index, transform: 0 });
+	});
+	var position = {
+	getMin: 0,
+	getMax: _items.length - 1,
+	}
+	var _transformItem = function (direction) {
+	if (direction === 'right') {
+	if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+	return;
+	}
+	if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+	_sliderControlLeft.classList.add('slider__control_show');
+	}
+	if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+	_sliderControlRight.classList.remove('slider__control_show');
+	}
+	_positionLeftItem++;
+	_transform -= _step;
+	}
+	if (direction === 'left') {
+	if (_positionLeftItem <= position.getMin) {
+	return;
+	}
+	if (!_sliderControlRight.classList.contains('slider__control_show')) {
+	_sliderControlRight.classList.add('slider__control_show');
+	}
+	if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+	_sliderControlLeft.classList.remove('slider__control_show');
+	}
+	_positionLeftItem--;
+	_transform += _step;
+	}
+	_sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+	}
+	// обработчик события click для кнопок "назад" и "вперед"
+	var _controlClick = function (e) {
+	if (e.target.classList.contains('slider__control')) {
+	e.preventDefault();
+	var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+	_transformItem(direction);
+	}
+	};
+	var _setUpListeners = function () {
+	// добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+	_sliderControls.forEach(function (item) {
+	item.addEventListener('click', _controlClick);
+	});
+	}
+	// инициализация
+	_setUpListeners();
+	return {
+	right: function () { // метод right
+	_transformItem('right');
+	},
+	left: function () { // метод left
+	_transformItem('left');
+	}
+	}
+	}
+	}());
+	var slider = multiItemSlider('.slider')
+	</script>
+	<!-- popylar  -->
+	<div class="container">
+		<div class="content-name">
+			<h2>Популярное</h2>
+		</div>
+		<div class="slider">
+			<div class="slider__wrapper">
+				<div class="slider__item">
+						<img src="{% static "img/b2.jpg" %}" alt="">
+						<p>Г.Маркес.Сто лет одиночества.349р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b4.jpg" %}" alt="">
+						<p>Д.Роллинс.Тропа мертвых.299р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b6.jpg" %}" alt="">
+						<p>Д.Грин.Бумажные города.399р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b8.jpg" %}" alt="">
+						<p>Р.Бредбери.Лекарство от меланхолии.399р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b10.jpg" %}" alt="">
+						<p>Т.Старджон.Больше,чем люди.349р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b9.jpg" %}" alt="">
+						<p>С.Хокинг.О вселенной в двух словах.499р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b8.jpg" %}" alt="">
+						<p>Р.Бредбери.Лекарство от меланхолии.399р.</p>
+				</div>
+			</div>
+			<a class="slider__control slider__control_left" href="#" role="button"></a>
+			<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+		</div>
+	</div>
+	<script>
+	'use strict';
+	var multiItemSlider = (function () {
+	return function (selector, config) {
+	var
+	_mainElement = document.querySelector(selector), // основный элемент блока
+	_sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+	_sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+	_sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+	_sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+	_sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+	_wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+	_itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+	_positionLeftItem = 0, // позиция левого активного элемента
+	_transform = 0, // значение транфсофрмации .slider_wrapper
+	_step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+	_items = []; // массив элементов
+	// наполнение массива _items
+	_sliderItems.forEach(function (item, index) {
+	_items.push({ item: item, position: index, transform: 0 });
+	});
+	var position = {
+	getMin: 0,
+	getMax: _items.length - 1,
+	}
+	var _transformItem = function (direction) {
+	if (direction === 'right') {
+	if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+	return;
+	}
+	if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+	_sliderControlLeft.classList.add('slider__control_show');
+	}
+	if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+	_sliderControlRight.classList.remove('slider__control_show');
+	}
+	_positionLeftItem++;
+	_transform -= _step;
+	}
+	if (direction === 'left') {
+	if (_positionLeftItem <= position.getMin) {
+	return;
+	}
+	if (!_sliderControlRight.classList.contains('slider__control_show')) {
+	_sliderControlRight.classList.add('slider__control_show');
+	}
+	if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+	_sliderControlLeft.classList.remove('slider__control_show');
+	}
+	_positionLeftItem--;
+	_transform += _step;
+	}
+	_sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+	}
+	// обработчик события click для кнопок "назад" и "вперед"
+	var _controlClick = function (e) {
+	if (e.target.classList.contains('slider__control')) {
+	e.preventDefault();
+	var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+	_transformItem(direction);
+	}
+	};
+	var _setUpListeners = function () {
+	// добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+	_sliderControls.forEach(function (item) {
+	item.addEventListener('click', _controlClick);
+	});
+	}
+	// инициализация
+	_setUpListeners();
+	return {
+	right: function () { // метод right
+	_transformItem('right');
+	},
+	left: function () { // метод left
+	_transformItem('left');
+	}
+	}
+	}
+	}());
+	var slider = multiItemSlider('.slider')
+	</script>
+	<!-- selections  -->
+	<div class="container">
+		<div class="content-name">
+			<h2>Наши тематические подборки</h2>
+		</div>
+		<div class="slider">
+			<div class="slider__wrapper">
+				<div class="slider__block">
+						<img src="{% static "img/b7.jpg" %}" alt="">
+						<p>В.Гюго.Девяносто третий год. 399р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b2.jpg" %}" alt="">
+						<p>Г.Маркес.Сто лет одиночества.349р.</p>
+				</div>
+				<div class="slider__item">
+					<img src="{% static "img/b3.jpg" %}" alt="">
+						<p>Г.Лавкрафт.Сны Ктулху.499р.</p>
 			</div>
 			<a class="slider__control slider__control_left" href="#" role="button"></a>
 			<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>

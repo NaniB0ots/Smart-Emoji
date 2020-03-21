@@ -8,7 +8,8 @@
 <body>
 <div class=container>
     <div class="emoji_books">
-        <h2>Идеально под ваше настроение {{ emoji }}
+        <h2>Идеально под ваше настроение</h2>
+        <h3>Подборка книг {{ emojy_name }} {{ emoji }}<h3>
 
             <div class="emoji_books_list">
 
@@ -17,60 +18,56 @@
                     <h3 class="book_name"> {{ book_name0 }}</h3>
                     <p class="book_author">{{author0}}</p>
                 </div>
-
+                
+                {% if i > 0 %}
                 <div class="em_books_item">
                     <img src={{book_img_path1}} alt="">
                     <h3 class="book_name"> {{ book_name1 }}</h3>
                     <p class="book_author">{{author1}}</p>
                 </div>
 
+                {% endif %}
+
+                {% if i > 1 %}
                 <div class="em_books_item">
                     <img src={{book_img_path2}} alt="">
                     <h3 class="book_name"> {{ book_name2 }}</h3>
                     <p class="book_author">{{author2}}</p>
                 </div>
+                {% endif %}
 
+                {% if i > 2 %}
                 <div class="em_books_item">
                     <img src={{book_img_path3}} alt="">
                     <h3 class="book_name"> {{ book_name3 }}</h3>
                     <p class="book_author">{{author3}}</p>
                 </div>
+                {% endif %}
 
+                {% if i > 3 %}
                 <div class="em_books_item">
                     <img src={{book_img_path4}} alt="">
                     <h3 class="book_name"> {{ book_name4 }}</h3>
                     <p class="book_author">{{author4}}</p>
                 </div>
+                {% endif %}
 
+                {% if i > 4 %}
                 <div class="em_books_item">
                     <img src={{book_img_path5}} alt="">
                     <h3 class="book_name"> {{ book_name5 }}</h3>
                     <p class="book_author">{{author5}}</p>
                 </div>
+                {% endif %}
 
+                {% if i > 5 %}
                 <div class="em_books_item">
                     <img src={{book_img_path6}} alt="">
                     <h3 class="book_name"> {{ book_name6 }}</h3>
                     <p class="book_author">{{author6}}</p>
                 </div>
+                {% endif %}
 
-                <div class="em_books_item">
-                    <img src={{book_img_path7}} alt="">
-                    <h3 class="book_name"> {{ book_name7 }}</h3>
-                    <p class="book_author">{{author7}}</p>
-                </div>
-
-                <div class="em_books_item">
-                    <img src={{book_img_path8}} alt="">
-                    <h3 class="book_name"> {{ book_name8 }}</h3>
-                    <p class="book_author">{{author8}}</p>
-                </div>
-
-                <div class="em_books_item">
-                    <img src={{book_img_path9}} alt="">
-                    <h3 class="book_name"> {{ book_name9 }}</h3>
-                    <p class="book_author">{{author9}}</p>
-                </div>
                 
 
 

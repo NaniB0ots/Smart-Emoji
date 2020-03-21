@@ -230,6 +230,22 @@ ul li ul li {
   height: 150px;
 
 }
+    .slider__block {
+      flex: 0 0 33.333333%;
+     display: block;
+      
+}
+
+.slider__block img{
+  width: 150px;
+  height: 200px;
+
+}
+.slider__block p{
+  width: 100px;
+  height: 150px;
+
+}
     .slider__control {
       position: absolute;
       top: 50%;
