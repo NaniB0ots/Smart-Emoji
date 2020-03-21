@@ -1,39 +1,207 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 	<head>
+
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="CSS/style.css">
-		<title>Ало</title>
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+		<title>Smart Emoji</title>
 	</head>
-    
-
-    🎂
-<!-- main -->
-<div class="teachers">
-    <div class="container">
-        <h1 class="our-teach">
-        Главная
-        </h1>
-        <h2>Не знаете, что почитать?</h2>
-        <div class="view-teach">
-            <div class="teach">
-                <div class="tch one"></div>
-                <a class=teach_link href="">
-                    <img class=teach_img src="images/main_block/class 1.png" alt="">
-                <p>Подборка книг по вашему настроению</p>
-            </a>
-            </div>
-            <div class="teach">
-                <div class="tch two"></div>
-                <a class=teach_link href="">
-                    <img class=teach_img src="images/main_block/book 1.png" alt="">
-                <p>Подборка книг по ключевым словам</p>
-            </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-</body>
+	<body>
+		<!-- Header -->
+		<div class="header">
+			<div class="header-logo">
+				<img src="img/logo.svg">
+			</div>
+			<div class="container">
+				<div class="input">
+					<input type="text" placeholder="Введите название книги или его автора">
+				</div>
+			</div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="#">...</a>
+					<ul class="dropdown">
+						<li><a href="#">Профиль</a></li>
+						<li><a href="#">Жанры</a></li>
+						<li><a href="#">Читалка</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- main -->
+	<div class="container">
+		<div class="main">
+			<h1>Главная</h1>
+			<p>Не знаете,что почитать?</p>
+		</div>
+		<div class="main-block">
+			<div class="block">
+				<img src="img/book1.jpg" alt="">
+				<p><a href="choose_emoji">Подборка книг по эмодзи</a></p>
+			</div>
+			<div class="block">
+				<img src="img/book2.png" alt="">
+				<p>Подборка книг по ключевым словам</p>
+			</div>
+		</div>
+	</div>
+	<!-- Now-reading  -->
+	<div class="container">
+		<div class="content-name">
+			<h2>Сейчас читают</h2>
+		</div>
+		<div class="slider">
+			<div class="slider__wrapper">
+				<div class="slider__item">
+					<!--   <div style="height: 150px; font-size:20px; color:black; background: url(img/img-book1.jpg);"><p>Глубокое обучение на питоне</p></div> -->
+				
+						<img src="img/img-book1.jpg" alt="">
+						<p>Глубокое обучение на питоне</p>
+				</div>
+				<div class="slider__item">
+					<img src="img/img-book1.jpg" alt="">
+						<p>Глубокое обучение на питоне</p>
+				</div>
+				<div class="slider__item">
+					<img src="img/img-book1.jpg" alt="">
+						<p>Глубокое обучение на питоне</p>
+				</div>
+				<div class="slider__item">
+					<img src="img/img-book1.jpg" alt="">
+						<p>Глубокое обучение на питоне</p>
+				</div>
+				<div class="slider__item">
+					<img src="img/img-book1.jpg" alt="">
+						<p>Глубокое обучение на питоне</p>
+				</div>
+				<div class="slider__item">
+					<img src="img/img-book1.jpg" alt="">
+						<p>Глубокое обучение на питоне</p>
+				</div>
+				<div class="slider__item">
+					<img src="img/img-book1.jpg" alt="">
+						<p>Глубокое обучение на питоне</p>
+				</div>
+			</div>
+			<a class="slider__control slider__control_left" href="#" role="button"></a>
+			<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+		</div>
+	</div>
+	<script>
+	'use strict';
+	var multiItemSlider = (function () {
+	return function (selector, config) {
+	var
+	_mainElement = document.querySelector(selector), // основный элемент блока
+	_sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+	_sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+	_sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+	_sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+	_sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+	_wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+	_itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+	_positionLeftItem = 0, // позиция левого активного элемента
+	_transform = 0, // значение транфсофрмации .slider_wrapper
+	_step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+	_items = []; // массив элементов
+	// наполнение массива _items
+	_sliderItems.forEach(function (item, index) {
+	_items.push({ item: item, position: index, transform: 0 });
+	});
+	var position = {
+	getMin: 0,
+	getMax: _items.length - 1,
+	}
+	var _transformItem = function (direction) {
+	if (direction === 'right') {
+	if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+	return;
+	}
+	if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+	_sliderControlLeft.classList.add('slider__control_show');
+	}
+	if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+	_sliderControlRight.classList.remove('slider__control_show');
+	}
+	_positionLeftItem++;
+	_transform -= _step;
+	}
+	if (direction === 'left') {
+	if (_positionLeftItem <= position.getMin) {
+	return;
+	}
+	if (!_sliderControlRight.classList.contains('slider__control_show')) {
+	_sliderControlRight.classList.add('slider__control_show');
+	}
+	if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+	_sliderControlLeft.classList.remove('slider__control_show');
+	}
+	_positionLeftItem--;
+	_transform += _step;
+	}
+	_sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+	}
+	// обработчик события click для кнопок "назад" и "вперед"
+	var _controlClick = function (e) {
+	if (e.target.classList.contains('slider__control')) {
+	e.preventDefault();
+	var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+	_transformItem(direction);
+	}
+	};
+	var _setUpListeners = function () {
+	// добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+	_sliderControls.forEach(function (item) {
+	item.addEventListener('click', _controlClick);
+	});
+	}
+	// инициализация
+	_setUpListeners();
+	return {
+	right: function () { // метод right
+	_transformItem('right');
+	},
+	left: function () { // метод left
+	_transformItem('left');
+	}
+	}
+	}
+	}());
+	var slider = multiItemSlider('.slider')
+	</script>
+	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<h1 class="footer-name">Обратная связь</h1>
+			<div class="content-foo">
+				<div class="foot-social">
+					<p>По вопросам рекламы и сотрудничества <br>Напишите нам - мы ответим в ближайшее время!</p>
+					<div class="foo">
+						<img class="foot-img" src="img/phone.svg" alt="">
+						<p>+7 (111) 222-33-44</p>
+					</div>
+					<div class="foo">
+						<img class="foot-img" src="img/mail.svg" alt="">
+						<p>order@bu-one.ru</p>
+					</div>
+					<div class="foot-social">
+						<p>Мы в соцсетях</p>
+						<a href="http://twitter.com/" class="social-icon twitter"></a>
+						<a href="http://facebook.com/" class="social-icon facebook"></a>
+						<a href="http://plus.google.com/" class="social-icon google-plus"></a>
+					</div>
+				</div>
+				<div id="footer-logo">
+					<a href="/"><img src="" alt="Smart-Emoji Logo"></a>
+					<p>Copyright © 2020 Smart-Emoji. </p>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
