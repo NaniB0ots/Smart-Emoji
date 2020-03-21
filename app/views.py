@@ -43,18 +43,12 @@ def emoji_books(request):
     data["emojy_name"] = emojy_name
 
     for i in range(len(db_data)):
-        data['book_img_path' + str(i)] = 'static/images/books/Book.png'  # + db_data[i]['img']
+        data['book_img_path' + str(i)] = 'static/img/' + db_data[i]['img']
         data['book_name' + str(i)] = db_data[i]['book_name']
         data['author' + str(i)] = db_data[i]['author']
         if i == 5:
             break
 
     data["i"] = i
-    # data = {
-    #     "emoji": emoji,
-    #     "book_img_path": "static/images/books/book1.jpg",
-    #     "book_name": book_name,
-    #     "author": author
-    # }
     get_conn().close()
     return render(request, "emoji_books.html", data)

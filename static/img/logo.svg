@@ -1,9 +1,68 @@
-<svg width="158" height="126" viewBox="0 0 158 126" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="158" height="126" fill="url(#pattern0)"/>
-<defs>
-<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0" transform="translate(0 -0.0179434) scale(0.0108696 0.0136301)"/>
-</pattern>
-<image id="image0" width="92" height="76" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABMCAIAAABvW0eUAAAE1UlEQVR4nO2ca0xbVRzA+cZnPoivWJVHNhddnFpqxgQfM2Fg3FgCMa6OmBojc/LQzJQ6oZHoMoIJH/ymX3yNGKcjJmZE2RoWZ5ashHQuLZcWCvQNlNt7++591EOaXdp7z236unCvnl/+n9rkPH49Pf/zv7e3VWmEgKq9HoAcQVIgICkQkBQIcCmRSGR+fn5mZuaqOLOzs3a7nWXZXR5xfhKJhNVqzTPsDBaLhSAIscHDpWAY1tXVVVNTUyVOQ0OD0WhMpVJSzrE4wCS9Xm9fX1+eYWfQarVzc3MMw0DbKV1KXV3d8PCw3KT4fD4kJYeMlP7+fiRlByQFApICYbelVFdXq1Sq7u5u3T30ev3U1BRN01JOsziAFJBoJycndbmo1WpJpAAjg4ODoVCIzkKs0b0FjIrOBXx4kkiR4ZelcEwmE5LCB0mBgKRAQFIgICkQkBQIcpUC+o/HmAjJhIniIh4rsccsZCol5XUHJkadPa8tnWwpKnwXhtiyl6dMpSTXlj2G97HWJ6xPP1BUuAZ62GSitE45FCTl/rzxf5RSW0AgKUgKkrINkgIBSYGApEBAUiAgKRCQFAhICgQkBYJACq/SQVLggaQUJmXxlaf8F8//Z6+npLwu/5fG5TdetXc08QJ7YZ+YlOVTbVs/f8vSVGmdcshUCh3aIqanAhOjvi/0vHCeahOT4h7qjd+dT5d9c1amUrav0caiNIHT+BYXVMAXvX0TzFwoxdb0iON4M3n9KptKlthjFnKVAoVh4gt3PZ+cFeYjrHW/x3AmubpckX6UJAVsFviVS87THcJ9196uBm/RRKgiHSlJCrXud3/8LvbiAZ4RkHS8IwPUhr/83SSDYqSwiXjkpsnx+mHhMnFqj+GXvys/6XAoRgrYZde/urB49KBQCthN4lZLpZZJWkFSEovWFd2JhcP12TpsTY86ThwhTdPlH9iyUYYUlqbJa79jLx2wPftw9o0ekHTcQxVLOhxKkMKyKfeq7/NzwkrHfuw5cIQFJ70K9JKFAqSAZUJMX1l5p5Nf6Rw96DUOUhuBCu4mGRQghSZD/osGe9shnhSnth3/5YcKJh0OuUsBc45ZzI7OZmGlA8rouO1OxZdJWv5SaDwYvPQNb5nYNKqlziPh2T9YSpIfBcldSnJ1ya1/D2vdx690zn+QXHOW2bgYcpcSuzMHUoxNrcqpdDqaQr/9RJNEmY2LIWMpLEttrm98PbHw/OPWZx7aqXRA0vnsIyq4kZbsyTsZS2GYyK0broEefqXzVjv+649SJB0O+UphKQq//D0o9nKkHHoQ7CbxhX+kSDoc8pVCBbyuD9/GWvbvVDqax5ZOtoRv/Al8ldxsIUglpba2FrxiNpud93C5XDiOF/gILptMRM1/O093LL78JBeO483e0XMp10rp0xVA03QwGHTmMjY2JokUIUWtHXA8AfnFYzizdvZNLjyf9oX/usZEw6U7yEVpj8tt/7g4Dg7429euuSAJNpmsYNJRmpRdAUmBgKRA2Hsp9fX1IyMjMpQi1WP9DodDp9M1NjbeJ45GoxkfH5ebFL/fbzAY8gw7Q29vr8ViKU4KyPYEQWxubq6LA44D0WhUyjmWAphnOBzOM+wMJElS4idG9KcyEJAUCEgKBCQFApICAUmBgKRA+BdPIwL0EjcppgAAABR0RVh0U29mdHdhcmUAWWFuZGV4LkRpc2tOX/iRAAAAAElFTkSuQmCC"/>
-</defs>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M501.746,136.776c-16.276-5.433-33.983-10.001-50.746-14.024V361c0,24.814-20.186,45-45,45
+			c-39.761,0-58.954,9.042-91.408,30.139c60.135,0.363,120.561,10.056,177.662,29.084c4.365,1.483,9.456,0.866,13.521-2.051
+			C509.686,460.345,512,455.819,512,451V151C512,144.54,507.869,138.812,501.746,136.776z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M106,406c-24.814,0-45-20.186-45-45V123.018c-16.71,4.012-34.455,8.317-50.746,13.759C4.131,138.812,0,144.54,0,151v300
+			c0,4.819,2.314,9.346,6.226,12.173c17.924,12.861,52.789-26.192,191.149-27.034C164.683,414.93,145.446,406,106,406z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M331,59.182v85.607l4.395-4.395c5.859-5.859,15.351-5.859,21.21,0l4.395,4.395v-94.53
+			C350.4,52.431,340.512,55.335,331,59.182z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M106,46c-8.291,0-15,6.709-15,15v300c0,8.291,6.709,15,15,15c55.913,0,80.039,16.392,126.563,47.402l8.438,5.625V93.043
+			C194.522,62.358,164.398,46,106,46z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M406,46c-5.319,0-10.118,0.315-15,0.582V181c0,6.064-3.647,11.543-9.258,13.857c-5.528,2.307-12.017,1.078-16.348-3.252
+			L346,172.211l-19.395,19.395c-4.307,4.277-10.737,5.596-16.348,3.252C304.647,192.543,301,187.064,301,181V74.213
+			c-9.435,5.479-19.373,11.814-30,18.831v335.984l8.438-5.625C325.961,392.391,350.087,376,406,376c8.291,0,15-6.709,15-15V61
+			C421,52.709,414.291,46,406,46z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
 </svg>
