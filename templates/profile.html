@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<script type="text/javascript" src="js/anime.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<title>Профиль</title>
+	</head>
+	<body>
+
+		<div class="content">
+			<!-- Header -->
+			<div class="header">
+					<div class="header-logo">
+						<a href="/">
+						<img src="{% static "img/logo.svg" %}">
+						<div class="logo-text">Emoji_Book</div>
+						</a>
+					</div>
+					<div class="container">
+	
+						<div class="head-input-buttons">
+							<div class="input">
+								<input type="text" placeholder="Введите название книги или его автора">
+							</div>
+	
+							<div class="header-butons">
+								<a href="/">На главную</a>
+								<a href="profile">Профиль</a>
+								<a href="#">Жанры</a>
+								<a href="#">Подборка</a>
+							</div>
+						</div>
+					</div>
+	
+	
+				<div class="basket">
+					<a href=""><img src="{% static "img/supermarket.svg" %}" alt=""></a>
+				</div>
+			</div>
+			</div>
+
+
+
+
+		<div class="content">
+		<!-- Profile -->
+		<div class="container">
+			<div class="profile">
+				<div class="con-ach"><b>Профиль</b></div>	
+			<div class="profile-info">
+				<div class="profile-img">
+					<img src="{% static "img/achievments/01_owe.jpg" %}" alt=""></div>
+				<div class="profile-name">
+					<p>dimon1998</p>
+					<p>Дмитрий</p>
+					<p>22 Марта 1998г.</p>
+					<p>Иркутск</p>
+					<p>Любимые жанры:фэнтези,романтика,романы,детективы.</p>
+				</div>
+			</div>
+			<div class="con-ach"><b>Полученные достижения:</b></div>	
+			
+			<div class="achieves">
+			
+				<div class="achieve-block">
+					<div class="ach-block">
+						<img src="{% static "img/achievments/1book.svg" %}" alt="">
+						<h3>"Новичок" </h3>
+						<p>Купить первую книгу
+						</p>
+					</div>
+				</div>
+				<div class="achieve-block">
+					<div class="ach-block">
+					<img src="{% static "img/achievments/hello writer.svg" %}" alt="">
+						<h3>"Hello, world!"</h3>
+						<p>Оставить первый отзыв
+						</p>
+					</div>
+				</div>
+				<div class="achieve-block">
+					<div class="ach-block">
+						<img src="{% static "img/achievments/achieve1.svg" %}" alt="">
+						<h3>"Падаван" </h3>
+						<p>Получить 1 достижение
+						</p>
+					</div>
+				</div>
+				</div>
+			
+				<div class="con-ach"><b>Неполученные достижения:</b></div>	
+			<div class="achieves">
+				
+				<div class="achieve-block">
+					
+					<div class="ach-block">
+						<img src="{% static "img/achievments/book2.svg" %}" alt="">
+						<h3>"Продвинутый"  </h3>
+						<p>Купить 5 книг
+						</p>
+					</div>
+				</div>
+
+				<div class="achieve-block">
+					
+					<div class="ach-block">
+						<img src="{% static "img/achievments/book3.svg" %}" alt="">
+						<h3>"Истинный книгоман"  </h3>
+						<p>Купить 25 книг
+						</p>
+					</div>
+				</div>
+				<div class="achieve-block">
+				
+					<div class="ach-block">
+						<img src="{% static "img/achievments/comment2.svg" %}" alt="">
+						<h3> "Люблю почитать" </h3>
+						<p>Оставить 25 отзывов
+						</p>
+					</div>
+				</div>
+				<div class="achieve-block">
+					
+						<div class="ach-block">
+							<img src="{% static "img/achievments/100_writer.svg" %}" alt="">
+						<h3>"Властелин цитат" </h3>
+						<p>Оставить 100 отзывов
+						</p>
+					</div>
+					</div>
+					<div class="achieve-block">
+						
+						<div class="ach-block">
+							<img src="{% static "img/achievments/mag-chern.svg" %}" alt="">
+						<h3>"Маг-чернокнижник"  </h3>
+						<p>Получить 15 достижения
+						</p>
+					</div>
+				</div>
+					
+					<div class="achieve-block">
+						
+						<div class="ach-block">
+							<img src="{% static "img/achievments/lord.svg" %}" alt="">
+						<h3>"Ohh, my Lord"  </h3>
+						<p>Получить 99 достижений
+						</p>
+					</div>
+					</div>
+
+
+
+
+					
+				</div>
+
+			</div>
+
+		</div>
+					<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<h1 class="footer-name">Обратная связь</h1>
+			<div class="content-foo">
+				<div class="foot-social">
+					<p>По вопросам рекламы и сотрудничества <br>Напишите нам - мы ответим в ближайшее время!</p>
+					<div class="foo">
+						<img class="foot-img" src="{% static "img/phone.svg" %}" alt="">
+						<p>+7 (111) 222-33-44</p>
+					</div>
+					<div class="foo">
+						<img class="foot-img" src="{% static "img/mail.svg" %}" alt="">
+						<p>order@bu-one.ru</p>
+					</div>
+					<div class="foot-social">
+						<p>Мы в соцсетях</p>
+						<a href="http://twitter.com/" class="social-icon twitter"></a>
+						<a href="http://facebook.com/" class="social-icon facebook"></a>
+						<a href="http://plus.google.com/" class="social-icon google-plus"></a>
+					</div>
+				</div>
+				<div class="footer-logo" id="footer-logo">
+					<!-- <a href="/"><"{% static img src="" %}" alt="Smart-Emoji Logo"></a> -->
+					<h2>😎</h2> 
+					<p>Copyright © 2020 Smart-Emoji. </p>
+				</div>
+			<!-- </div> -->
+		
+    </div>
+			</div>
+			</body>
+		</html>

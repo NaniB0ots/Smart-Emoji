@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Идеально под настроение</title>
+</head>
+<body>
+
+    <div class="content">
+		<!-- Header -->
+		<div class="header">
+				<div class="header-logo">
+					<img src="{% static "img/logo.svg" %}">
+					<div class="logo-text">Emoji_Book</div>
+				</div>
+				<div class="container">
+
+					<div class="head-input-buttons">
+						<div class="input">
+							<input type="text" placeholder="Введите название книги или его автора">
+						</div>
+
+						<div class="header-butons">
+                            <a href="/">На главную</a>
+							<a href="profile">Профиль</a>
+							<a href="#">Жанры</a>
+							<a href="#">Подборка</a>
+						</div>
+					</div>
+				</div>
+
+
+			<div class="basket">
+				<a href=""><img src="{% static "img/supermarket.svg" %}" alt=""></a>
+			</div>
+		</div>
+		</div>
+
+
+
+    <!-- <div class="content"> -->
+    <div class="content">
+    <div class=container>
+    <div class="cont">
+    <div class="emoji_books">
+        <div class="emoji_books_title">
+        <h2>Идеально под ваше настроение</h2>
+        <h3>Подборка книг {{ emojy_name }} {{ emoji }}<h3>
+        </div>
+
+            <div class="emoji_books_list">
+                <div class="em_books_item">
+                    <img src={{book_img_path0}} alt="">
+
+                   
+                </div>
+                <div class="diskr_book">
+                    <h3 class="book_name"> {{ book_name0 }}</h3>
+                    <h4 class="book_author">Автор {{author0}}</h4>
+                    <p> {{description0}} </p>
+                    <button class="btn-add-to-basket">Добавть в корзину</button>
+                </div>
+                    
+            </div>
+            <!-- <div class="horizontal-line"></div> -->
+            
+                 
+                {% if i > 0 %}
+                <div class="emoji_books_list">
+                    <div class="em_books_item">
+                        <img src={{book_img_path1}} alt="">
+                    </div>
+                    <div class="diskr_book">
+                        <h3 class="book_name"> {{ book_name1 }}</h3>
+                        <h4 class="book_author">Автор {{author1}}</h4>
+                        <p> {{description1}} </p>
+                        <button class="btn-add-to-basket">Добавть в корзину</button>
+                    </div>    
+                </div>
+                {% endif %}
+
+                <hr width="100%">
+
+                {% if i > 1 %}
+                <div class="emoji_books_list">
+                    <div class="em_books_item">
+                        <img src={{book_img_path2}} alt="">
+                    </div>
+                    <div class="diskr_book">
+                        <h3 class="book_name"> {{ book_name2 }}</h3>
+                        <h4 class="book_author">Автор {{author2}}</h4>
+                        <p> {{description2}} </p>
+                        <button class="btn-add-to-basket">Добавть в корзину</button>
+                    </div>    
+                </div>
+                {% endif %}
+
+                {% if i > 2 %}
+                <div class="emoji_books_list">
+                    <div class="em_books_item">
+                        <img src={{book_img_path3}} alt="">
+                    </div>
+                    <div class="diskr_book">
+                        <h3 class="book_name"> {{ book_name3 }}</h3>
+                        <h4 class="book_author">Автор {{author3}}</h4>
+                        <p> {{description3}} </p>
+                        <button class="btn-add-to-basket">Добавть в корзину</button>
+                    </div>    
+                </div>
+                {% endif %}
+
+                {% if i > 3 %}
+                <div class="emoji_books_list">
+                    <div class="em_books_item">
+                        <img src={{book_img_path4}} alt="">
+                    </div>
+                    <div class="diskr_book">
+                        <h3 class="book_name"> {{ book_name4 }}</h3>
+                        <h4 class="book_author">Автор {{author4}}</h4>
+                        <p> {{description4}} </p>
+                        <button class="btn-add-to-basket">Добавть в корзину</button>
+                    </div>    
+                </div>
+                {% endif %}
+
+                {% if i > 4 %}
+                <div class="emoji_books_list">
+                    <div class="em_books_item">
+                        <img src={{book_img_path5}} alt="">
+                    </div>
+                    <div class="diskr_book">
+                        <h3 class="book_name"> {{ book_name5 }}</h3>
+                        <h4 class="book_author">Автор {{author5}}</h4>
+                        <p> {{description5}} </p>
+                        <button class="btn-add-to-basket">Добавть в корзину</button>
+                    </div>    
+                </div>
+                {% endif %}
+
+                {% if i > 5 %}
+                <div class="emoji_books_list">
+                    <div class="em_books_item">
+                        <img src={{book_img_path6}} alt="">
+                    </div>
+                    <div class="diskr_book">
+                        <h3 class="book_name"> {{ book_name6 }}</h3>
+                        <h4 class="book_author">Автор {{author6}}</h4>
+                        <p> {{description6}} </p>
+                        <button class="btn-add-to-basket">Добавть в корзину</button>
+                    </div>    
+                </div>
+                {% endif %}
+
+            </div>
+            </div>
+            </div>
+
+            	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<h1 class="footer-name">Обратная связь</h1>
+			<div class="content-foo">
+				<div class="foot-social">
+					<p>По вопросам рекламы и сотрудничества <br>Напишите нам - мы ответим в ближайшее время!</p>
+					<div class="foo">
+						<img class="foot-img" src="{% static "img/phone.svg" %}" alt="">
+						<p>+7 (111) 222-33-44</p>
+					</div>
+					<div class="foo">
+						<img class="foot-img" src="{% static "img/mail.svg" %}" alt="">
+						<p>order@bu-one.ru</p>
+					</div>
+					<div class="foot-social">
+						<p>Мы в соцсетях</p>
+						<a href="http://twitter.com/" class="social-icon twitter"></a>
+						<a href="http://facebook.com/" class="social-icon facebook"></a>
+						<a href="http://plus.google.com/" class="social-icon google-plus"></a>
+					</div>
+				</div>
+				<div class="footer-logo" id="footer-logo">
+					<!-- <a href="/"><"{% static img src="" %}" alt="Smart-Emoji Logo"></a> -->
+					<h2>😎</h2> 
+					<p>Copyright © 2020 Smart-Emoji. </p>
+				</div>
+			</div>
+		</div>
+    </div>
+
+
+        </div>
+    </div>
+    <div>
+</body>
+</html>

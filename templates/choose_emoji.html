@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Выбор книги под настроение</title>
+</head>
+<body>
+
+
+    <div class="content">
+		<!-- Header -->
+		<div class="header">
+				<div class="header-logo">
+                    <a href="/">
+						<img src="{% static "img/logo.svg" %}">
+						<div class="logo-text">Emoji_Book</div>
+					</a>
+				</div>
+				<div class="container">
+
+					<div class="head-input-buttons">
+						<div class="input">
+							<input type="text" placeholder="Введите название книги или его автора">
+						</div>
+
+						<div class="header-butons">
+                            <a href="/">На главную</a>
+							<a href="profile">Профиль</a>
+							<a href="#">Жанры</a>
+							<a href="#">Подборка</a>
+						</div>
+					</div>
+				</div>
+
+
+			<div class="basket">
+				<a href=""><img src="{% static "img/supermarket.svg" %}" alt=""></a>
+			</div>
+		</div>
+		</div>
+
+
+    
+<div class="content">
+<div class="container">
+<div class="cont">
+<div class="choose_emoji">
+    <h2>Какие книги соответствуют вашему настроению?</h2>
+    <div class=emojis>
+        <div class=emojis__item>
+        <a class=emoji_link href="/emoji_books?id=Смешные">
+            <div class=emoji_img>😂</div> 
+            <div class=emoji_text>Смешные</div>
+        </a>
+        </div>
+
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Романтичные">
+                <div class=emoji_img>❤️</div>
+                <div class=emoji_text>Романтичные</div> 
+            </a>
+            </div>
+
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Умные">
+                <div class=emoji_img>🤯</div>
+                <div class=emoji_text>Умные</div> 
+            </a>
+        </div>
+        
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Жестокие">
+                <div class=emoji_img>🔪</div>
+                <div class=emoji_text>Жестокие</div> 
+            </a>
+        </div>
+
+        
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Мистика">
+                <div class=emoji_img>👻</div>
+                <div class=emoji_text>Мистика</div> 
+            </a>
+        </div>
+
+        
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Экшн">
+                <div class=emoji_img>😎</div>
+                <div class=emoji_text>Экшн</div> 
+            </a>
+        </div>
+
+        
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Сексуальные">
+                <div class=emoji_img>🔞</div>
+                <div class=emoji_text>Сексуальные</div> 
+            </a>
+        </div>
+
+        
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Вдохновение">
+                <div class=emoji_img>🤔</div>
+                <div class=emoji_text>Вдохновение</div> 
+            </a>
+        </div>
+
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Страшные">
+                <div class=emoji_img>😱</div>
+                <div class=emoji_text>Страшные</div> 
+            </a>
+        </div>
+
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Странные">
+                <div class=emoji_img>😟</div>
+                <div class=emoji_text>Странные</div> 
+            </a>
+        </div>
+
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Молодежные">
+                <div class=emoji_img>🤪</div>
+                <div class=emoji_text>Молодежные</div> 
+            </a>
+        </div>
+
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Трогательные">
+                <div class=emoji_img>😥</div>
+                <div class=emoji_text>Трогательные</div> 
+            </a>
+        </div>
+
+        <div class=emojis__item>
+            <a class=emoji_link href="/emoji_books?id=Научные">
+                <div class=emoji_img>🤖</div>
+                <div class=emoji_text>Научные</div> 
+            </a>
+        </div>
+
+        <div class="emojis__item">
+            <a class=emoji_link href="/emoji_books?id=Волнующие">
+                <div class="emoji_img">😰</div>
+                <div class="emoji_text">Волнующие</div> 
+            </a>
+        </div>
+
+        <div class="emojis__item">
+            <a class=emoji_link href="/emoji_books?id=Добрые">
+                <div class=emoji_img>😊</div>
+                <div class=emoji_text>Добрые</div> 
+            </a>
+        </div>
+
+        <div class="emojis__item">
+            <a class=emoji_link href="/emoji_books?id=Грустные">
+                <div class=emoji_img>😔</div>
+                <div class=emoji_text>Грустные</div> 
+            </a>
+        </div>
+
+</div>
+    </div>
+</div>
+<div class="content-button">
+    <a href="/"><div><button>Назад</button</div></div></a>
+ </div>
+</div>
+
+	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<h1 class="footer-name">Обратная связь</h1>
+			<div class="content-foo">
+				<div class="foot-social">
+					<p>По вопросам рекламы и сотрудничества <br>Напишите нам - мы ответим в ближайшее время!</p>
+					<div class="foo">
+						<img class="foot-img" src="{% static "img/phone.svg" %}" alt="">
+						<p>+7 (111) 222-33-44</p>
+					</div>
+					<div class="foo">
+						<img class="foot-img" src="{% static "img/mail.svg" %}" alt="">
+						<p>order@bu-one.ru</p>
+					</div>
+					<div class="foot-social">
+						<p>Мы в соцсетях</p>
+						<a href="http://twitter.com/" class="social-icon twitter"></a>
+						<a href="http://facebook.com/" class="social-icon facebook"></a>
+						<a href="http://plus.google.com/" class="social-icon google-plus"></a>
+					</div>
+				</div>
+				<div class="footer-logo" id="footer-logo">
+					<!-- <a href="/"><"{% static img src="" %}" alt="Smart-Emoji Logo"></a> -->
+					<h2>😎</h2> 
+					<p>Copyright © 2020 Smart-Emoji. </p>
+				</div>
+			</div>
+		
+    </div>
+    
+
+
+
+</div>
+</div>
+</body>
+</html>
